@@ -4,17 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background: #fcb69f;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 10px;
+            transition: background 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background: #ffa07a;
+        }
+    </style>
 </head>
 <body>
-    <h1>お問い合わせ</h1>
-    <form action="mailto:kakeibo.simple@gmail.com" method="post" enctype="text/plain">
-        <label for="name">名前:</label><br>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">メールアドレス:</label><br>
-        <input type="email" id="email" name="email"><br><br>
-        <label for="message">メッセージ:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-        <input type="submit" value="送信">
-    </form>
+    <div class="container">
+        <h1>お問い合わせ</h1>
+        <form action="mailto:kakeibo.simple@gmail.com" method="post" enctype="text/plain">
+            <label for="name">名前:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">メッセージ:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <input type="submit" value="送信">
+        </form>
+    </div>
 </body>
 </html>
